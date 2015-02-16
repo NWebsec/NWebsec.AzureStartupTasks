@@ -6,13 +6,13 @@
     <title>NWebsec.AzureStartupTasks</title>
     <authors>André N. Klingsheim</authors>
     <owners>André N. Klingsheim</owners>
-    <licenseUrl>https://nwebsec.codeplex.com/license</licenseUrl>
-    <projectUrl>https://nwebsec.codeplex.com</projectUrl>
+    <licenseUrl>https://github.com/NWebsec/NWebsec.AzureStartupTasks/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/NWebsec/NWebsec.AzureStartupTasks/wiki</projectUrl>
     <iconUrl>https://klings.blob.core.windows.net/nwebsecicon/nwebsec_nuget.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Provides a startup task to harden the TLS configuration on Azure role instances. See project website for documentation.</description>
     <releaseNotes>This release removes the AES-GCM cipher suites from TLS configuration to avoid potential issues introduced by MS14-066. See release notes at project web site for more details.</releaseNotes>
-    <copyright>Copyright © 2013,2014</copyright>
+    <copyright>Copyright © 2013 - 2015</copyright>
     <tags>NWebsec security Asp.Net Azure</tags>
   </metadata>
 </package>
