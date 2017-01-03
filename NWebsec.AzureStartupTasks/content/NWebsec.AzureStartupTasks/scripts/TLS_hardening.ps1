@@ -48,6 +48,10 @@ $rebootRequired = (UpdateRegistryPath "HKLM:\SYSTEM\CurrentControlSet\Control\Se
 $rebootRequired = (UpdateRegistryPath "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server") -Or $rebootRequired
 $rebootRequired = (UpdateRegistryKey "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server" "Enabled" 0 "DWord") -Or $rebootRequired
 
+# Disable Triple DES 168
+write-output "**** Making sure Triple DES 168 is disabled ****"
+$rebootRequired = (UpdateRegistryPath "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\Triple DES 168") -Or $rebootRequired
+$rebootRequired = (UpdateRegistryKey "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\Triple DES 168" "Enabled" 0 "DWord") -Or $rebootRequired
 # Enable TLS 1.1
 write-output "**** Making sure TLS 1.1 is enabled ****"
 $rebootRequired = (UpdateRegistryPath "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1") -Or $rebootRequired
